@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 void main() {
   // Fonksiyon çağırmak
   print("ilk işlem başarılı olarak çalıştırıldı.");
- 
 
   String name = "Serbay";
 
@@ -55,7 +54,7 @@ class MyApp extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "Search Anything...",
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: ImageIcon(AssetImage('varliklar/search.png')),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                     borderSide: BorderSide(
@@ -67,7 +66,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.all(16.0),
               child: Row(
                 children: [
                   Text(
@@ -99,29 +98,127 @@ class MyApp extends StatelessWidget {
             const SizedBox(height: 16),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 children: [
-                  for (int i = 0; i < 10; i++)
-                    Column(
-                      children: [
-                        if (i % 2 == 0)
-                          Image.asset('varliklar/fashion.png')
-                        else
-                          Image.asset('varliklar/electronic.png'),
-                        Text(i % 2 == 0 ? "Fashion" : "Electronic"),
-                      ],
-                    ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 24.0),
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'varliklar/fashion.png',
+                                height: 100,
+                                width: 100,
+                                
+                              ),
+                            ),
+                            const Text("Fashion"),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 24.0),
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'varliklar/electronic.png',
+                                height: 100,
+                                width: 100,
+                              ),
+                            ),
+                            const Text("Electronic"),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 24.0),
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'varliklar/appliances.png',
+                                height: 100,
+                                width: 100,
+                              ),
+                            ),
+                            const Text("Appliances"),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 24.0),
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'varliklar/beauty.png',
+                                height: 100,
+                                width: 100,
+                              ),
+                            ),
+                            const Text("Beauty"),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 24.0),
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'varliklar/furniture.png',
+                                height: 100,
+                                width: 100,
+                              ),
+                            ),
+                            const Text("Furniture"),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
-            Text(
-              'Hello, $name! How are you?',
-            ),
-            Text(
-              'Hello, $name! How are you?',
-            ),
-            Text(
-              'Hello, $name! How are you?',
+            const SizedBox(height: 16),
+            Container(
+              color: Color(0xFFFFE0B8),
+               width: MediaQuery.of(context).size.width ,
+                
+              padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 2),
+             
+              child: Image.asset('varliklar/image.png',
+
+              height: 154,
+              width:  MediaQuery.of(context).size.width / 2,
+              ),
+              
+           
             ),
           ],
         ),
