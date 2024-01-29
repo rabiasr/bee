@@ -98,7 +98,7 @@ class MyApp extends StatelessWidget {
             const SizedBox(height: 16),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 children: [
                   Column(
@@ -113,7 +113,6 @@ class MyApp extends StatelessWidget {
                                 'varliklar/fashion.png',
                                 height: 100,
                                 width: 100,
-                                
                               ),
                             ),
                             const Text("Fashion"),
@@ -208,17 +207,61 @@ class MyApp extends StatelessWidget {
             const SizedBox(height: 16),
             Container(
               color: Color(0xFFFFE0B8),
-               width: MediaQuery.of(context).size.width ,
-                
-              padding: EdgeInsets.only(left: MediaQuery.of(context).size.width / 2),
-             
-              child: Image.asset('varliklar/image.png',
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "MIN 15% \n OFF",
+                          style: TextStyle(
+                            color: Color(0xFF3F1405),
+                            fontFamily: 'Inter',
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.w700,
+                            height: 1.25,
+                            letterSpacing: 2.88,
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            // Butona basıldığında yapılacak işlemler
+                          },
+                 
+                          child: const Text(
+                            "SHOP NOW",
+                            style: TextStyle(
+                         
+                              fontFamily: 'Inter',
+                              fontSize: 8,
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w700,
+                              height:5,
+                              letterSpacing: 1.25,
+                            ),
+                          ),
+            
 
-              height: 154,
-              width:  MediaQuery.of(context).size.width / 2,
+
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 100,
+                  ),
+                  Expanded(
+                    child: Image.asset(
+                      'varliklar/image.png',
+                      width: 400,
+                      height: 220,
+                      
+                    ),
+                  ),
+                ],
               ),
-              
-           
             ),
           ],
         ),
