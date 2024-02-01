@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'dosya.dart';
 // Fonksiyon tanımlamak
 void main() {
   // Fonksiyon çağırmak
@@ -8,8 +8,9 @@ void main() {
   String name = "Serbay";
 
   bool isDebug = false;
-
-  runApp(const MyApp());
+ 
+ runApp(const MyApp());
+  runApp(const Dosya());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +22,11 @@ class MyApp extends StatelessWidget {
 
     bool isDebug = false;
 
-    return MaterialApp(
+/*    return MaterialApp(
       debugShowCheckedModeBanner: isDebug,
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("Home"),
           centerTitle: false,
           actions: [
@@ -268,7 +270,10 @@ class MyApp extends StatelessWidget {
         drawer: const Drawer(),
       ),
     );
-  }
+ */
+     return MaterialApp();
+
+ }
 }
 
 // Veri tipleri
